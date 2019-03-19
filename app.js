@@ -3,6 +3,7 @@ const fastify = require('fastify')();
 
 //ROUTES
 fastify.register(require('./routes/user'), {prefix: '/users'});
+fastify.register(require('./routes/auth'), {prefix: '/auth'});
 
 fastify.get('/' , (req,res) => {
     res.send('hello world!!');
